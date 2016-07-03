@@ -25,5 +25,6 @@
     "jasmine-core": "jasmine#^2.4.1"
   },
   "dependencies": {
+    "bootstrap": "^3.3.6"
   }
 }
