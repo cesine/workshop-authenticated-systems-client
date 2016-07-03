@@ -1,5 +1,5 @@
 {
-  "name": "lotauth",
+  "name": "anything",
   "version": "0.0.1",
   "authors": [
     "cesine <cesine@yahoo.com>"
@@ -20,5 +20,10 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "devDependencies": {
+    "jasmine-core": "jasmine#^2.4.1"
+  },
+  "dependencies": {
+  }
 }

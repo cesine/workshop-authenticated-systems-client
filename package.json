@@ -1,9 +1,10 @@
 {
-  "name": "lotauth",
+  "name": "anything",
   "version": "0.0.1",
   "description": "Example client side app for authenticated systems workshop",
   "main": "index.js",
   "scripts": {
+    "lint": "jshint components/*/** test/*/**",
     "test": "jasmine-node test",
     "test:browser":  "open SpecRunner.html"
   },

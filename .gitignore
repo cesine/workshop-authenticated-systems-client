@@ -1,0 +1,18 @@
+# Temp files
+.DS_Store
+*swap
+~*
+npm-debug.log*
+.lock-wscript
+.npm
+.node_repl_history
+
+# Generated directories
+dist
+build/Release
+coverage
+docs
+
+# Dependency directory
+node_modules
+bower_components
