@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "jshint components/*/** test/*/**",
     "test": "jasmine-node test",
-    "test:browser":  "open SpecRunner.html"
+    "test:browser": "open SpecRunner.html"
   },
   "keywords": [
     "authentication",
@@ -14,5 +14,9 @@
     "jwt"
   ],
   "author": "cesine <cesine@yahoo.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "fetch-mock": "^4.6.0",
+    "node-fetch": "^1.5.3"
+  }
 }
