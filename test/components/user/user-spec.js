@@ -1,7 +1,7 @@
 'use strict';
 /* globals fetchMock */
 
-let fetchMockLocal;
+var fetchMockLocal;
 
 try {
   fetchMockLocal = fetchMock;
