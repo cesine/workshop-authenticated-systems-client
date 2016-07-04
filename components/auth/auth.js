@@ -23,7 +23,6 @@
     }
 
     static login(options) {
-      const self = this;
       let xhr;
       let opts = {
         method: 'POST'
@@ -54,12 +53,36 @@
         }
 
         if (data) {
-          for (const attr in data) {
-            if (data.hasOwnProperty(attr)) {
-              self[attr] = data[attr];
-            }
-          }
-          return self;
+          return data;
+        }
+      });
+    }
+
+    static logout(options) {
+      let xhr;
+      let opts = {
+        method: 'POST'
+      };
+
+      if (options && options.server) {
+        Auth.server = {
+          url: options.server
+        };
+      }
+
+      return global.fetch(Auth.server.url + '/v1/auth/logout', opts).then(function(response) {
+        xhr = response;
+        return response.json();
+      }).then(function(data) {
+        if (xhr.status >= 400) {
+          data.status = xhr.status;
+          data.statusText = xhr.statusText;
+          data.url = xhr.url;
+          throw data;
+        }
+
+        if (data) {
+          return data;
         }
       });
     }
@@ -67,4 +90,3 @@
 
   exports.Auth = Auth;
 })(exports, global);
-
